@@ -1,29 +1,29 @@
-Projects
+<h1>Projects</h1>
 
-japi - .Net Core Web Api
-japi.tests - test project to test japi
-jui - Web App based on vue js with bootstrap-vue
+japi - .Net Core Web Api<br>
+japi.tests - test project to test japi<br>
+jui - Web App based on vue js with bootstrap-vue<br>
 
-To build and run
+<h2>To build and run</h2>
 
-japi
+<h3>japi</h3>
 
-Requirement: .Net Core 2.1
+<i>Requirement: .Net Core 2.1</i>
 
->dotnet restore
+>dotnet restore<br>
 >dotnet run
 
-japi.tests
+<h3>japi.tests</h3>
 
->dotnet restore
+>dotnet restore<br>
 >dotnet test
 
-jui
+<h3>jui</h3>
 
-Requirement: latest version of npm
+<i>Requirement: latest version of npm</i>
 
->npm install
->npm build
+>npm install<br>
+>npm build<br>
 >npm run dev
 
 Open listed http://localhost:port
