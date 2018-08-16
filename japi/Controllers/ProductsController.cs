@@ -64,7 +64,11 @@ namespace JApi.Controllers
             }
             catch(ArgumentException)
             {
-                return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status409Conflict);
+                return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status400BadRequest);
+            }
+            catch(MissingFieldException)
+            {
+                return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status204NoContent);
             }
 
             return CreatedAtAction("Get", new { id = product.Id }, product);

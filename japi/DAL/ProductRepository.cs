@@ -11,6 +11,13 @@ namespace JApi.DAL
 
         public void Add(Product product)
         {
+            if(string.IsNullOrEmpty(product.Description) 
+                || string.IsNullOrEmpty(product.Model) 
+                || string.IsNullOrEmpty(product.Brand))
+            {
+                throw new MissingFieldException("Required field Description, Model or Brand is missing.");
+            }
+
             if(string.IsNullOrEmpty(product.Id))
             {
                 product.Id = Guid.NewGuid().ToString();
