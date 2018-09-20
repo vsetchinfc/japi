@@ -47,11 +47,8 @@ export default {
   {
     axios({
       method: 'get',
-      url: 'http://localhost:5000/api/products',
-      auth: {
-        username: 'test',
-        password: 'test'
-      }    
+      headers: { 'Authorization': this.$cookie.get('token') },
+      url: 'http://localhost:5000/api/products', 
     })
     .then(response => {
         console.log(response.data);

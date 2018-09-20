@@ -58,11 +58,8 @@ export default {
         onSubmit () {
             axios({
                 method: 'post',
+                headers: { 'Authorization': this.$cookie.get('token') },
                 url: 'http://localhost:5000/api/products',
-                auth: {
-                    username: 'test',
-                    password: 'test'
-                },
                 data: this.product 
             })
             .then(function(response) {
@@ -70,10 +67,10 @@ export default {
                 console.log(response.headers['Authorization']);
             }).catch(err => console.log(err));
 
-            this.$router.push({ path: '/'});
+            this.$router.push({ path: '/ProductsList'});
         },
         onReset () {
-            this.$router.push({ path: '/'});
+            this.$router.push({ path: '/ProductsList'});
         },
     }
 }
