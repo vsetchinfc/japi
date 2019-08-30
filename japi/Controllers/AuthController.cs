@@ -12,7 +12,6 @@ namespace JApi.Controllers
     [Route("api/auth")]
     public class AuthController : Controller
     {
-        // GET api/values
         [HttpPost, Route("login")]
         public IActionResult Login([FromBody]User user)
         {
